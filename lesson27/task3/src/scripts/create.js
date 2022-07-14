@@ -9,13 +9,12 @@ export const addNewTask = event => {
     return;
   }
   const tasksList = getItem('tasksList') || [];
-  console.log(tasksList);
-  const newTasksList = tasksList.push({
+  tasksList.push({
     text: taskInput.value,
     done: false,
-    id: Math.floor(Math.random().toString()),
+    id: Math.floor(Math.random()).toString(),
   });
-  setItem('tasksList', newTasksList);
+  setItem('tasksList', tasksList);
   renderTasks();
   taskInput.value = '';
 };

@@ -4,6 +4,11 @@ import { getItem, setItem } from './storage.js';
 const listElem = document.querySelector('.list');
 
 export const checkboxStatusChange = event => {
+  const isCheckbox = event.target.classList.contains('list__item-checkbox');
+  if (!isCheckbox) {
+    return;
+  }
+
   const checkedItem = event.target.dataset.id;
   const tasksList = getItem('tasksList');
   const newTasksList = tasksList.map(task => {
@@ -20,4 +25,4 @@ export const checkboxStatusChange = event => {
   renderTasks();
 };
 
-listElem.addEventListener('click', checkboxStatusChange);
+listElem.addEventListener('change', checkboxStatusChange);
