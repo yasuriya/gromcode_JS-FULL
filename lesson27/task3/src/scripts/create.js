@@ -4,7 +4,7 @@ import { getItem, setItem } from './storage.js';
 const taskInput = document.querySelector('.task-input');
 const createTaskBtn = document.querySelector('.create-task-btn');
 
-export const addNewTask = event => {
+export const addNewTask = () => {
   if (taskInput.value === '') {
     return;
   }
