@@ -14,7 +14,7 @@ const renderData = userData => {
 
   userAvatarEl.setAttribute('src', avatar_url);
   userNameEl.textContent = name;
-  userLocationEl.textContent = location ? `located in ${location}` : '';
+  userLocationEl.textContent = location ? `from ${location}` : '';
 };
 
 const onSearchUser = () => {
