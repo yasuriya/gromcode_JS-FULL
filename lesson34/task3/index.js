@@ -21,9 +21,10 @@ function onSubmit(event) {
     body: JSON.stringify(Object.fromEntries(new FormData(loginForm))),
   })
     .then(response => response.json())
-    .then(user => alert(JSON.stringify(user)));
-
-  loginForm.reset();
+    .then(user => {
+      alert(JSON.stringify(user));
+      loginForm.reset();
+    });
 }
 
 loginForm.addEventListener('input', formValidation);
