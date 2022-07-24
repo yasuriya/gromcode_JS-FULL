@@ -28,6 +28,20 @@ const onSearchUser = async () => {
   } finally {
     hideSpinner();
   }
+
+  // fetchFn(userName)
+  //   .then(userData => {
+  //     renderData(userData);
+  //     return userData.repos_url;
+  //   })
+  //   .then(url => fetchRepos(url))
+  //   .then(reposList => {
+  //     renderRepos(reposList);
+  //   })
+  //   .catch(err => {
+  //     alert(err.message);
+  //   })
+  //   .finally(() => hideSpinner());
 };
 
 showBtn.addEventListener('click', onSearchUser);
